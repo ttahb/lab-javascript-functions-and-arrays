@@ -2,11 +2,10 @@
 function maxOfTwoNumbers(a, b) {
   if(a > b)
     return a;
-  else if(a < b){
+  else {
     return b;
-  } else {
-    return a;
-  }
+  } 
+  return a;
 }
 
 
@@ -48,8 +47,14 @@ function sumNumbers(numbers) {
 
 
 // Iteration #3.1 Bonus:
-function sum() {
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
 
+// should return: 57
+
+function sum(mixedArr) {
+  if(mixedArr.length === 0){
+    return 
+  }
 }
 
 
@@ -203,7 +208,10 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct() {}
+function greatestProduct() {
+
+
+}
 
 
 
