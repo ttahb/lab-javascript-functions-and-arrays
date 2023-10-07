@@ -46,15 +46,45 @@ function sumNumbers(numbers) {
 
 
 // Iteration #3.1 Bonus:
-const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8];
 
 // should return: 57
 
 function sum(mixedArr) {
   if(mixedArr.length === 0){
-    return 
+    return 0;
   }
+
+  let sum = 0;
+  for(let i=0; i<mixedArr.length; i++){
+    let item = mixedArr[i];
+    let itemType = typeof item;
+    //console.log("itemType", itemType);
+    if (!(itemType === 'number' || itemType === 'string' || itemType === 'boolean')) {
+      throw new Error(`Unsupported DataType found in the array - ${itemType}`);
+    }
+
+    switch (itemType) {
+      case "number":
+        //console.log("number ", item);
+        sum += item;
+        break;
+      case "string":
+        //console.log("string ", item);
+        sum += item.length;
+        break;
+      case "boolean":
+        //console.log("boolean ", item);
+        sum += item;
+        break;
+    }
+  }
+
+  return sum;
+
 }
+
+//sum(mixedArr);
 
 
 
