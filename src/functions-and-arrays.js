@@ -5,7 +5,6 @@ function maxOfTwoNumbers(a, b) {
   else {
     return b;
   } 
-  return a;
 }
 
 
